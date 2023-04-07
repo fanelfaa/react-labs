@@ -1,0 +1,16 @@
+.toast-spot{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 24px;
+}
+
+.toast-card{
+    padding: 8px 24px;
+    background: white;
+    box-shadow: 2px 8px 12px rgba(197, 197, 197, 0.2);
+    border-radius: 4px;
+    &:not(:last-child){
+        margin-bottom: 16px;
+    }
+}
