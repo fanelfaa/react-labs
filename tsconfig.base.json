@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@fielabs/classed-component": ["libs/classed-component/src/index.ts"],
+      "@react-labs/example/ui": ["libs/example/ui/src/index.ts"],
       "@react-labs/observer-context": ["libs/observer-context/src/index.ts"],
       "@react-labs/ui": ["libs/ui/src/index.ts"]
     }

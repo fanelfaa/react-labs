@@ -1,4 +1,4 @@
-import { classed } from '@fielabs/classed-component';
+import { Flex } from '@react-labs/example/ui';
 import { createStore } from '@react-labs/observer-context';
 import { ToastSpot, useToast } from '@react-labs/ui';
 import { useEffect, useRef } from 'react';
@@ -27,23 +27,19 @@ const Increment = () => {
   );
 };
 
-const ClassedDiv = classed('div', "border-box");
-
-const Flex = classed(ClassedDiv, "flex")
-
 const ToastImplement = () => {
   const toast = useToast();
 
-  const divRef = useRef<HTMLDivElement>(null)
+  const divRef = useRef<HTMLDivElement>(null);
 
-  useEffect(()=>{
-    if(divRef.current){
-      divRef.current.classList.add("class-from-ref")
+  useEffect(() => {
+    if (divRef.current) {
+      divRef.current.classList.add('class-from-ref');
     }
-  },[])
+  }, []);
 
   return (
-    <Flex className="inline-class" ref={divRef}>
+    <Flex className="inline-class" ref={divRef} gap="20px">
       <button onClick={() => toast.info({ title: 'Testing Toast Info' })}>
         Publish Toast Info
       </button>
